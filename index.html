@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Consumo de Energia Elétrica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Calculadora de Consumo de Energia Elétrica</h1>
+    <p>Calcule a energia gasta com os equipamentos da sua empresa ou residência. Digite a quantidade de Watts do seu aparelho e selecione a quantidade de horas e dias de consumo em um mês!</p>
+    <p>Esta calculadora de consumo de energia funciona de forma automática: através dela você poderá calcular consumo de energia online, calcular kwh/mes e também aprenderá a calcular o preço do preço kwh de modo fácil e rápido. A calculo de consumo de energia
+        elétrica foi desenvolvida para permitir que facilmente sejam encontrados os valores de kWh gastos por mês em residências com base na potência dos equipamentos, horas de uso por dia e dias de uso por mês.</p>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8" style="height: auto !important;">
+            <div class="calculadora">
+                <div class="row espacador">
+
+
+                    <div class="col-xs-12 col-sm-6">
+                        <label>Potência Aparelho W</label>
+                        <input type="number" class="form-control seletor" id="txtPotencia" value="" placeholder="Digite o Valor em Watts">
+                        <small>Digite a potência em Watts do aparelho e role a página para ver o resultado</small>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <label class="lblcenter">Tempo de uso por Dia</label>
+                        <div class="row">
+                            <div class="col-6 col-sm-6">
+                                <select class="form-control seletor" id="drHoras"><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option></select><small>Horas</small>
+                            </div>
+                            <div class="col-6 col-sm-6">
+                                <select class="form-control seletor" id="drMinutos"><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option></select><small>Minutos</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row espacador">
+                    <div class="col-xs-6 col-sm-4">
+                        <label>Dias Uso no Mês</label>
+                        <select class="form-control seletor" id="drDias">
+							<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option></select>
+                        <small>Quantidade de dias no mês que fica ligado</small>
+                    </div>
+                    <div class="col-xs-6 col-sm-4">
+                        <label>Preço kWh (R$)</label>
+                        <input type="number" class="form-control seletor" id="txtValor" value="0.70">
+                        <small>Aprenda a encontrar o valor na imagem abaixo!</small>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 vlrtotmob">
+                        <label>Valor Total</label><br>
+                        <h2 class="valorTotal">R$ 33,26</h2>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <br><br>
+            <h2>Resultados do Cálculo</h2>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Horas de Uso diário</td>
+                            <td><span id="horasdeuso">24h 0m</span></td>
+                        </tr>
+                        <tr>
+                            <td>Dias por mês</td>
+                            <td><span id="diaspormes">30d</span></td>
+                        </tr>
+                        <tr>
+                            <td>Total Consumido</td>
+                            <td><span id="totalConsumido">47,52 kWh</span></td>
+                        </tr>
+                        <tr>
+                            <td>Valor kWh informado</td>
+                            <td><span id="valorkwhinformado">R$ 0,70</span></td>
+                        </tr>
+                        <tr>
+                            <td>Média de valor gasto por dia</td>
+                            <td><span id="valorgastopordia">R$ 1,11 por dia</span></td>
+                        </tr>
+                        <tr>
+                            <td>Média de kWh gasto por dia</td>
+                            <td><span id="kwhgastopordia">1,58kWh por dia</span></td>
+                        </tr>
+                        <tr>
+                            <td>Valor a pagar</td>
+                            <td><b><span class="valorTotal">R$ 33,26</span></b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <br><br>
+            <h2>Potências comuns em aparelhos elétricos</h2>
+            <p>Altere a quantidade de dias e horas de uso acima para recalcular automaticamente</p>
+            <div class="table-responsive">
+                <table class="table table-striped consumos">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Baixa</th>
+                            <th>Média</th>
+                            <th>Alta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Carregador de Celular</td>
+                            <td>0.12 W <small>(sem celular)</small> <span data-consumo="0.12">R$ 0.06</span></td>
+                            <td>5W <span data-consumo="5">R$ 2.52</span></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Exaustor Fogão (Lamp Apagada)</td>
+                            <td>100 W <span data-consumo="100">R$ 50.40</span></td>
+                            <td>130 W <span data-consumo="130">R$ 65.52</span></td>
+                            <td>176 W <span data-consumo="176">R$ 88.70</span></td>
+                        </tr>
+                        <tr>
+                            <td>Exaustor Fogão (Lamp Acesa)</td>
+                            <td>140 W <span data-consumo="140">R$ 70.56</span></td>
+                            <td>170 W <span data-consumo="170">R$ 85.68</span></td>
+                            <td>215 W <span data-consumo="215">R$ 108.36</span></td>
+                        </tr>
+                        <tr>
+                            <td>TV LED 40"</td>
+                            <td>0.5W <small>(Stand By)</small> <span data-consumo="0.5">R$ 0.25</span></td>
+                            <td>25 W <span data-consumo="25">R$ 12.60</span></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Ventilador Pequeno</td>
+                            <td>35 W <span data-consumo="35">R$ 17.64</span></td>
+                            <td>38 W <span data-consumo="38">R$ 19.15</span></td>
+                            <td>40 W <span data-consumo="40">R$ 20.16</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ventilador Médio</td>
+                            <td>37 W <span data-consumo="37">R$ 18.65</span></td>
+                            <td>45 W <span data-consumo="45">R$ 22.68</span></td>
+                            <td>59 W <span data-consumo="59">R$ 29.74</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <small>As colunas "baixa, média e alta" representam a velocidade dos aparelhos (1, 2, 3) ou temperatura (morno, quente e etc).</small>
+                <br><br>
+                <br><br>
+            </div>
+        </div>
+
+        <div id="medicao">47</div>
+        <div id="medicaoValor">33,26</div>
+    </div>
+    <br><br>
+    <h2>Como calcular o valor do kWh</h2>
+
+    <br><br>
+    <small>
+					<b>Cálculo do valor do kWh</b><br>
+					1) Localize na sua conta de energia o seu consumo em kWh<br>
+					2) Divida o valor total da sua conta pelos kWh<br>
+					3) No exemplo acima: R$ 297,92 / 366kW = R$ 0.81<br>
+				</small>
+
+
+    <script>
+    </script>
+    </div>
+
+    </div>
+    </div>
+
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
